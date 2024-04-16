@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.png'
+import { navItems } from "../constants"
 
 const Navbar = () => {
   return (
@@ -8,7 +9,15 @@ const Navbar = () => {
             <div className='flex justify-center items-center'>
                 <div className='flex items-center flex-shrink-0'>
                     <img className='h-10 w-10 mr-2' src={logo} alt=''/>
+                    <span className='text-xl tracking-tight'>VirtualR</span>
                 </div>
+                <ul className='lg-flex ml-14 space-x-12'>
+                    {navItems.map((item, index) => (
+                        <li key = {index}>
+                            <a href={item.href}>{item.label}</a>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     </nav>
