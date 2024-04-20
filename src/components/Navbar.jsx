@@ -32,6 +32,11 @@ const Navbar = () => {
                         Create an account
                     </a>
                 </div>
+                <div className='lg:hidden md:flex flex-col justify-end'>
+                    <button onClick={toggleNavbar}>
+                        {mobileDrawerOpen ? <X/> : <Menu />}
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
