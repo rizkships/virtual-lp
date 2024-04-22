@@ -23,7 +23,7 @@ const Navbar = () => {
                             <a href={item.href}>{item.label}</a>
                         </li>
                     ))}
-                </ul>
+                </ul> 
                 <div className='hidden lg:flex justify-center space-x-12 items-center'>
                     <a href="#" className='py-2 px-3 border rounded-md'>
                         Sign In
@@ -40,7 +40,13 @@ const Navbar = () => {
             </div>
             {mobileDrawerOpen && (
                 <div className='lg:hidden fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center'>
-                    
+                    <ul>
+                        {navItems.map((item, index) => (
+                            <li key={index} className='py-4'>
+                                <a href = {item.href}>{item.label}</a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             )}
         </div>
