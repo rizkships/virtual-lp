@@ -17,7 +17,7 @@ const Navbar = () => {
                     <img className='h-10 w-10 mr-2' src={logo} alt=''/>
                     <span className='text-xl tracking-tight'>VirtualR</span>
                 </div>
-                <ul className='lg-flex ml-14 space-x-12'> {/* I removed hidden! */}
+                <ul className='flex ml-14 space-x-12'> {/* I removed hidden! */}
                     {navItems.map((item, index) => (
                         <li key = {index}>
                             <a href={item.href}>{item.label}</a>
