@@ -17,13 +17,16 @@ const Navbar = () => {
                     <img className='h-10 w-10 mr-2' src={logo} alt=''/>
                     <span className='text-xl tracking-tight'>VirtualR</span>
                 </div>
-                <ul className='flex ml-14 space-x-12'> {/* I removed hidden! */}
-                    {navItems.map((item, index) => (
-                        <li key = {index}>
-                            <a href={item.href}>{item.label}</a>
-                        </li>
-                    ))}
-                </ul> 
+                 {/* Only display the navigation items when the mobile drawer is closed */}
+        {!mobileDrawerOpen && (
+          <ul className='hidden lg:flex ml-14 space-x-12'>
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        )}
                 <div className='hidden lg:flex justify-center space-x-12 items-center'>
                     <a href="#" className='py-2 px-3 border rounded-md'>
                         Sign In
