@@ -20,6 +20,8 @@ const pricing = () => {
                         </p>
                         <p className="mb-8">
                             <span>{option.price}</span>
+                            <span className="text-neutral-400 tracking-tight">/Month</span>
+
                         </p>
                     </div>
                 </div>
